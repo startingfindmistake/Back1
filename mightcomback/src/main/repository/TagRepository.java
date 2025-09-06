@@ -1,4 +1,4 @@
-package TagRelatedDesign;
+package com.mightcomback.domain;
 
 
 import org.springframework.data.jpa.Repository.JpaRepository;

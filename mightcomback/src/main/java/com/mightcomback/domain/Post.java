@@ -1,6 +1,6 @@
-package TagRelatedDesign;
+package com.mightcomback.domain;
 
-import TagRelatedDesign.Tag;    // Tag 엔티티 패키지 경로
+import com.mightcomback.domain.Tag;    // Tag 엔티티 패키지 경로
 import jakarta.persistence.*;
 import Lombok.Getter;
 import Lombok.NoArgsConstructor;
@@ -43,6 +43,9 @@ public class Post {
 
     @Lob // 본문 내용은 길 수 있으므로 TEXT 타입으로 매핑
     @Column (name = "body")
+    private String body;
+
+    @Column (name = "rating")
     private Short rating;
 
     @Column(name = "address", length = 255)
@@ -54,7 +57,7 @@ public class Post {
 
     @CreationTimestamp  // JPA: 엔티티 생성 시 자동으로 현재 시간 기록
     @Column(name = "created_at", nullable = false, updatable = false)
-    private LocolDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @UpdateTimestamp    // JPA: 엔티티 업데이트 시 자동으로 현재 시간 기록
     @Column(name = "updated_at")

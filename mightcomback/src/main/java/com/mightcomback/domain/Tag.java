@@ -1,6 +1,5 @@
-package TagRelatedDesign;
+package com.mightcomback.domain;
 
-import TagRelatedDesign.Post;   // post 엔팉키의 실제 패키지 경로
 import jakarta.persistence.*;
 import Lombok.Getter;
 import Lombok.NoArgsConstructor;
