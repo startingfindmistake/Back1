@@ -55,7 +55,7 @@ public class PostService {
         }
 
         // 조화된 Post 엔티티 리스트를 PostResponseDto 리스트로 변환하여 반환합니다.
-        // Entity를 직접 Controller로 반환하는 것은 좋지 않은 습관이므로, DTO로 변환하는 과정을 거칩니다.
+        // DTO 변환 로직은 PostResponseDto 클래스가 담당합니다.
         return posts.stream()
             .map(PostResponseDto::fromEntity)
             .collect(Collectors.toList());
@@ -63,4 +63,3 @@ public class PostService {
 
      // ... 여기에서 게시물 생성, 수정, 삭제 등의 비즈니스 로직 추가...
 }
-
